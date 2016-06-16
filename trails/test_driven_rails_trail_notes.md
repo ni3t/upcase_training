@@ -74,4 +74,8 @@ Once we get the tests passing, we want to refactor the code. This can be done in
 3. Spec
  	* combining repeated code into support modules
 
+#Todos
+
+1. Find and save database_cleaner config
+2. Find and save rspec config
  	
