@@ -4,4 +4,8 @@ class Shout < ActiveRecord::Base
 
 	belongs_to :content, polymorphic: true
 
+	def self.text_shouts
+		where(content_type: "TextShout")
+	end
+
 end

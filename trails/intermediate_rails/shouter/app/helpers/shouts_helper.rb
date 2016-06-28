@@ -7,5 +7,15 @@ module ShoutsHelper
 		image_tag("http://gravatar.com/avatar/#{digest}?s=#{size}")
 	end
 
+	def shouterize text
+		link_hashtags(strip_tags(text)).html_safe
+	end
+
+	private
+
+	def link_hashtags text
+		text.gsub(/#(\w*)/) { |match| link_to match, hashtag_path($1)  }
+	end
+
 end
 
